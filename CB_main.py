@@ -84,6 +84,10 @@ class GPU:
     def is_good(self):
         return self.good
 class ONLINER_BAR_ITEM:
+    '''
+    entrance storing info from ad for onliner_baraholka and kufar
+    ready to store graphics card ads
+    '''
     def __init__(self, time_up, time_created, price,
                  author,city, text, moretext,
                  link, currency, buy_sell_type, shipping,author_link,
@@ -524,7 +528,7 @@ class Kufar_request:
     def parse_url(self, next_url):
         self.next_url = next_url
 
-    def moretext_reconnect(link):
+    def moretext_reconnect(self,link):
         ad_text = requests.get(link).text
         start_pos = ad_text.find(KUF_MORETEXT_FIND)
         end_pos = ad_text.find('<', start_pos + len(KUF_MORETEXT_FIND))
@@ -543,8 +547,9 @@ kufar_link = kufar_gpu
 def launch_kufar_parse(kufar_link):
     kr1 = Kufar_request(kufar_link)
     kr1.parse()
-    #kr1.parse_2_to_9()
-    #kr1.parse_last_9()
+
+    kr1.parse_2_to_9()
+    kr1.parse_last_9()
     print(len(obi_list))
     file = open(time_now_filename + kufar_link.split('?')[-1] + '.txt', 'wb')
     static_file = open('lastfile.txt', 'w')
