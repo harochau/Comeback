@@ -31,6 +31,13 @@ SKU_TO_GPU ={
 
 
 def take_link_screenshot(link):
+    '''
+
+    :param link:
+    :return:
+    takes screenshot of full page with chromium webdriver and
+    saves it to the script folder with name {end of link}.png
+    '''
     options = webdriver.ChromeOptions()
     options.headless = True
     driver = webdriver.Chrome(options=options)
