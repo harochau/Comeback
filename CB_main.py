@@ -548,8 +548,8 @@ def launch_kufar_parse(kufar_link):
     kr1 = Kufar_request(kufar_link)
     kr1.parse()
 
-    kr1.parse_2_to_9()
-    kr1.parse_last_9()
+    #kr1.parse_2_to_9()
+    #kr1.parse_last_9()
     print(len(obi_list))
     file = open(time_now_filename + kufar_link.split('?')[-1] + '.txt', 'wb')
     static_file = open('lastfile.txt', 'w')
