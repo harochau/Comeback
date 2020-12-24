@@ -1,3 +1,11 @@
+# -*- coding: utf-8 -*-
+"""My first portfolio project
+Author: harochau@gmail.com
+
+This module will be able to request data form onliner_baraholka, kufar and yandex_market, parse it and store in/load form local files
+"""
+
+#-----constants--------
 a = 2/3
 REGEX_DIGITS = '[-+]?(0[xX][\dA-Fa-f]+|0[0-7]*|\d+)'
 YAN_MAR_SHOP_NAME = 'data-autotest-currency="б.p."><span>'
@@ -5,6 +13,7 @@ YAN_MAR_SHOP_NAME_LEN = len(YAN_MAR_SHOP_NAME)
 ONLINER_BAR_PRICE = '<div class="price-primary">'
 ONLINER_BAR_PRICE_LEN = len(ONLINER_BAR_PRICE)
 KUF_MORETEXT_FIND = '<div class="k-PFvs-32e68">'
+#-----constants--------
 
 CODENAMES = {
     'g70':'NV47',
